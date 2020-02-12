@@ -1,0 +1,11 @@
+<div>
+  <div>{{ currentQuestion.text }}</div>
+  <ul>
+    <li *ngFor="let answer of currentQuestion.answers">{{ answer }}</li>
+  </ul>
+</div>
+
+<app-question-navigator
+  [questions]="questions"
+  [(currentIndex)]="currentIndex"
+></app-question-navigator>
